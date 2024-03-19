@@ -44,8 +44,7 @@ main {
   grid-template-columns: 1fr 2fr;
   grid-template-rows: 1fr;
   grid-template-areas: "a b b";
-  margin: 0 auto;
-  margin-top: 18.125rem;
+  margin: 18.125rem auto 0;
   width: 70%;
   max-width: 57.5rem;
   height: auto;
