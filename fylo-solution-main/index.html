@@ -24,14 +24,17 @@
                 <div class="icon-img">
                     <img src="images/icon-folder.svg" alt="" aria-hidden="true" />
                 </div>
-                <div class="icon-img">
-                    <img src="images/icon-upload.svg" alt="" aria-hidden="true" />
+                <div class="icon-img upload-btn">
+                    <label for="upload">
+                        <img src="images/icon-upload.svg" id="uploadImage" alt="Upload Image" aria-hidden="true">
+                    </label>
+                    <input type="file" id="upload" onchange="handleFileInput(this)" multiple accept=".jpg, .jpeg, .gif, .png, .svg" style="display: none">
                 </div>
             </section>
         </section>
         <!-- Storage Container -->
         <section class="storage-container">
-            <h1>You've used <span>815 GB</span> of your storage</h1>
+            <h1>You've used <span id="sizeUsed">0 MB</span> of your storage</h1>
             <!-- Progress Bar -->
             <section class="progress-bar">
                 <div class="gradient-bar">
@@ -40,16 +43,22 @@
                     </div>
                 </div>
             </section>
+            <p id="selectedFile" class="selectedFile"></p>
             <h2>
-                <span>0 GB</span>
-                <span>1000 GB</span>
+                <span>0 MB</span>
+                <span id="totalSize">100 MB</span>
             </h2>
+            <div id="clear-container">
+                <button id="clear">Clear</button>
+            </div>
             <!-- GB left -->
             <section class="gb-left">
-                <p>185 <span>GB left</span></p>
+                <p id="sizeLeft" >100</p> <span>MB Left</span>
             </section>
         </section>
     </main>
+
+    <script src="app.js"></script>
 </body>
 
 </html>
